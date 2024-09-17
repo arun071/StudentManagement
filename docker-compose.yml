@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+  springboot-app:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    volumes:
+      - ./logs:/app/logs
+    restart: on-failure
+
+  react-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react-app
+    ports:
+      - "5173:5173"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

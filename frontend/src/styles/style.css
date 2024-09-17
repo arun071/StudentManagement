@@ -1,0 +1,25 @@
+
+/* Center the loader */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: #f5f5f5;
+  }
+  body{
+    background-color: rgb(202, 220, 221);
+    /* background-color: rgb(233, 226, 255); */
+  }
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+
+.add-button {
+  position: fixed;
+  bottom: 20px;  /* Adjust the distance from the bottom */
+  right: 20px;   /* Adjust the distance from the right */
+  z-index: 1000; /* Ensures the button stays above other elements */
+}
